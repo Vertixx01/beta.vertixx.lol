@@ -1,27 +1,11 @@
 import { useEffect, useState, } from "react";
-import { useLanyard } from "react-use-lanyard";
 import { AiFillGithub } from "react-icons/ai";
 import { BsDiscord } from "react-icons/bs";
 import Link from "next/link";
 import Head from "next/head";
+import Image from "next/image";
 
 export default function Home() {
-  interface User {
-    id: string | undefined;
-    username: string | undefined;
-    avatar: string | undefined;
-  }
-  const [user, setUser] = useState<User>();
-  const lanyard = useLanyard({
-    userId: "664133993347940384",
-  });
-  useEffect(() => {
-    setUser({
-      id: lanyard?.data?.data.discord_user.id,
-      username: lanyard?.data?.data.discord_user.username,
-      avatar: `https://cdn.discordapp.com/avatars/${lanyard?.data?.data.discord_user.id}/${lanyard?.data?.data.discord_user.avatar}.png`,
-    });
-  }, [lanyard]);
   return (
     <div className={'h-screen w-screen bg-[#121212] font-mono'}>
       <Head>
@@ -30,7 +14,7 @@ export default function Home() {
       </Head>
       <div className={'flex flex-col justify-center items-center mb-64'}>
         <div className={'flex flex-row gap-2 font-bold h-10 w-32 rounded-3xl bg-[#2B2B3B] justify-center items-center mt-14'}>
-          <img src={user?.avatar} className={'rounded-full h-8 w-8'} />
+          <Image className={'rounded-full h-8 w-8'} src={'https://cdn.discordapp.com/avatars/664133993347940384/469327a7b6452c894761cf7faad71eeb.png?size=4096'} width={8} height={8} style={{ borderRadius: '9999px' }} alt={"icon"} />
           <h1 className={'text-white text-base'}>Vertixx</h1>
         </div>
       </div>
