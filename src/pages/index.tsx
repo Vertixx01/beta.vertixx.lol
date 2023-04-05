@@ -19,7 +19,7 @@ export default function Home() {
         </div>
       </div>
       <div className={'flex flex-col justify-center items-center drop-shadow-glow'}>
-        <h1 className={'text-white text-base sm:text-2xl font-bold'}>Hey, I'm <span className={'underline font-extrabold text-transparent bg-clip-text bg-gradient-to-l to-[#2E74C1] via-[#6AD9E7] from-[#F68201]'}>Vertixx</span></h1>
+        <h1 className={'text-white text-base sm:text-2xl font-bold'}>Hey, I&apos;m <span className={'underline font-extrabold text-transparent bg-clip-text bg-gradient-to-l to-[#2E74C1] via-[#6AD9E7] from-[#F68201]'}>Vertixx</span></h1>
         <h1 className={'text-white text-base sm:text-2xl font-bold'}>So i basically do random stuff</h1>
         <h1 className={'text-white text-base sm:text-2xl font-bold'}>And i love <Link className={'underline hover:text-[#2E74C1]'} href={"https://www.typescriptlang.org/"}>Typescript</Link>, <Link className={'underline hover:text-[#6AD9E7]'} href={"https://go.dev/"}>Golang</Link> and <Link className={'underline hover:text-[#F68201]'} href={"https://www.rust-lang.org/"}>Rust</Link></h1>
       </div>
