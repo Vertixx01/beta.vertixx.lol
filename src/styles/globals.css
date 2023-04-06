@@ -1,3 +1,38 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    --typescript: #2E74C1;
+    --golang: #6AD9E7;
+    --rust: #F68201;
+}
+@keyframes background-pan {
+    from {
+        background-position: 0 center
+    }
+    to {
+        background-position: -200% center
+    }
+}
+
+h1 > #magic-name {
+    animation: background-pan 3s linear infinite;
+    background: linear-gradient(
+        to right,
+        var(--typescript) 0%,
+        var(--golang) 50%,
+        var(--rust) 100%
+    );
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#top {
+    transition: transform 0.5s;
+}
+
+#top:hover {
+    transform: scale(1.5);
+}
